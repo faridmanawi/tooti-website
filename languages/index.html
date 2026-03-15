@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Learn English for Your Language — Tooti</title>
+
+<meta name="description" content="Choose your language and start learning English with Tooti. Courses for 200+ languages including Dari, Pashto, Urdu, Spanish and Farsi." />
+
+<link rel="canonical" href="https://tootiapp.com/languages" />
+
+<style>
+
+:root{
+--purple:#A259FF;
+--ink:#0f1222;
+--muted:#5a6072;
+--bg:#ffffff;
+--card:#fbfbff;
+--border:rgba(15,18,34,.10);
+--shadow:0 14px 34px rgba(15,18,34,.08);
+--radius:18px;
+--max:1080px;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Inter",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+background:var(--bg);
+color:var(--ink);
+line-height:1.6;
+}
+
+.wrap{
+max-width:var(--max);
+margin:auto;
+padding:24px;
+}
+
+.topbar{
+border-bottom:1px solid var(--border);
+background:#fff;
+position:sticky;
+top:0;
+}
+
+.topbar-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.brand{
+font-weight:900;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:999px;
+background:var(--purple);
+box-shadow:0 0 0 4px rgba(162,89,255,.12);
+}
+
+.nav a{
+text-decoration:none;
+margin-left:14px;
+font-size:14px;
+color:var(--muted);
+}
+
+.nav a:hover{
+color:var(--ink);
+}
+
+.hero{
+padding:60px 0 30px 0;
+}
+
+h1{
+font-size:46px;
+letter-spacing:-.7px;
+margin-bottom:10px;
+}
+
+.sub{
+font-size:18px;
+color:var(--muted);
+max-width:600px;
+}
+
+.languages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:30px;
+}
+
+@media(max-width:900px){
+.languages{
+grid-template-columns:1fr;
+}
+}
+
+.card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:20px;
+box-shadow:var(--shadow);
+transition:transform .1s ease;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card a{
+text-decoration:none;
+font-weight:700;
+color:var(--purple);
+font-size:18px;
+}
+
+.card p{
+margin-top:6px;
+font-size:14px;
+color:var(--muted);
+}
+
+.footer{
+margin-top:60px;
+border-top:1px solid var(--border);
+padding-top:20px;
+font-size:14px;
+color:var(--muted);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.footer a{
+color:var(--purple);
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="wrap">
+<div class="topbar-inner">
+
+<a class="brand" href="/">
+<span class="dot"></span>
+<span>Tooti</span>
+</a>
+
+<div class="nav">
+<a href="/">Home</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/terms.html">Terms</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<div class="hero">
+
+<h1>Learn English for Your Language</h1>
+
+<p class="sub">
+Choose your language and start learning real-life English with Tooti.
+Courses designed for immigrants, beginners, and everyday communication.
+</p>
+
+</div>
+
+<div class="languages">
+
+<div class="card">
+<a href="/english-for-dari-speakers">English for Dari Speakers</a>
+<p>Speaking + listening lessons for Dari learners.</p>
+</div>
+
+<div class="card">
+<a href="/english-for-pashto-speakers">English for Pashto Speakers</a>
+<p>Practical English for Pashto speakers.</p>
+</div>
+
+<div class="card">
+<a href="/english-for-urdu-speakers">English for Urdu Speakers</a>
+<p>Daily English conversations for Urdu learners.</p>
+</div>
+
+<div class="card">
+<a href="/english-for-spanish-speakers">English for Spanish Speakers</a>
+<p>Real-life English for Spanish speakers.</p>
+</div>
+
+<div class="card">
+<a href="/english-for-farsi-speakers">English for Farsi Speakers</a>
+<p>English lessons designed for Farsi learners.</p>
+</div>
+
+</div>
+
+<div class="footer">
+
+<div>© <span id="y"></span> Tooti</div>
+
+<div>
+<a href="/privacy.html">Privacy</a> •
+<a href="/terms.html">Terms</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
