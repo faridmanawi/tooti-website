@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tooti — Learn English for Immigrants & Beginners</title>
+
+  <meta name="description" content="Tooti helps immigrants learn real-life English fast. Courses for Dari, Pashto, Urdu, Spanish, Farsi and 200+ languages. Speaking and listening practice for beginners." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tootiapp.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tootiapp.com/" />
+  <meta property="og:title" content="Tooti — Learn English for Immigrants & Beginners" />
+  <meta property="og:description" content="Learn real-life English fast. Courses for Dari, Pashto, Urdu, Spanish, Farsi and 200+ languages." />
+  <meta property="og:image" content="https://tootiapp.com/og-tooti.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tooti — Learn English for Immigrants & Beginners" />
+  <meta name="twitter:description" content="English courses for 200+ languages." />
+  <meta name="twitter:image" content="https://tootiapp.com/og-tooti.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Tooti",
+    "applicationCategory":"EducationalApplication",
+    "operatingSystem":"Android, iOS",
+    "url":"https://tootiapp.com/",
+    "description":"Tooti helps immigrants and beginners learn real-life English fast.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
+
+  <style>
+    :root{
+      --purple:#A259FF;            /* electric purple */
+      --ink:#0f1222;
+      --muted:#5a6072;
+      --bg:#ffffff;                /* mostly white */
+      --card:#ffffff;              /* white cards */
+      --card2:#fbfbff;             /* near-white */
+      --border:rgba(15,18,34,.10);
+      --shadow:0 12px 30px rgba(15,18,34,.08);
+      --radius:18px;
+      --max:1080px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Inter",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+      text-decoration:none;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px; background:var(--purple);
+      box-shadow:0 0 0 4px rgba(162,89,255,.10);
+    }
+    .nav{
+      display:flex; align-items:center; gap:14px;
+      font-size:14px; color:var(--muted);
+    }
+    .nav a{ text-decoration:none; padding:8px 10px; border-radius:12px; }
+    .nav a:hover{ background:rgba(15,18,34,.04); color:var(--ink); }
+
+    /* ✅ REMOVE PURPLE CURTAINS: keep hero clean white */
+    .hero{
+      padding:56px 0 22px;
+      background:#fff;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:26px;
+      align-items:center;
+      padding:22px 0 10px;
+    }
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr; text-align:left;}
+      .nav{display:none;}
+    }
+
+    /* small accent pill only */
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(162,89,255,.08);
+      border:1px solid rgba(162,89,255,.14);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      width:max-content;
+    }
+
+    h1{
+      margin:14px 0 12px;
+      font-size:54px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    @media (max-width:520px){
+      h1{font-size:42px;}
+    }
+
+    /* keep only a tiny purple accent */
+    .accent{color:var(--purple);}
+
+    .sub{
+      margin:0 0 18px;
+      font-size:18px;
+      color:var(--muted);
+      max-width:56ch;
+    }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin:18px 0 10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid var(--border);
+      box-shadow:0 10px 22px rgba(15,18,34,.06);
+      transition:transform .08s ease, box-shadow .08s ease;
+      user-select:none;
+      background:#fff;
+      color:var(--ink);
+    }
+    .btn:active{ transform:translateY(1px); box-shadow:0 6px 14px rgba(15,18,34,.06); }
+
+    /* ✅ Purple only on primary button */
+    .btn.primary{
+      background:var(--purple);
+      color:white;
+      border-color:rgba(162,89,255,.35);
+    }
+
+    .fine{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+    .fine a{
+      color:var(--purple);
+      text-decoration:none;
+    }
+    .fine a:hover{ text-decoration:underline; }
+
+    .hero-card{
+display:flex;
+justify-content:center;
+align-items:center;
+background:transparent;
+border:none;
+box-shadow:none;
+padding:0;
+}
+
+    /* ✅ Make preview box mostly white, only tiny purple border */
+    .mock{
+      height:320px;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid rgba(162,89,255,.18);
+      position:relative;
+      overflow:hidden;
+    }
+    .mock::after{
+      content:"Your app preview goes here";
+      position:absolute;
+      left:16px; bottom:16px;
+      font-size:14px;
+      color:rgba(15,18,34,.55);
+      background:rgba(255,255,255,.92);
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(15,18,34,.08);
+    }
+
+    section{ padding:26px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:-.2px;
+    }
+    .section-sub{
+      margin:0 0 16px;
+      color:var(--muted);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width:900px){ .cards{grid-template-columns:1fr;} }
+
+    /* ✅ cards are white, not purple */
+    .card{
+      background:var(--card2);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:16px;
+      text-align:left;
+    }
+    .card b{display:block; margin-bottom:6px;}
+    .card p{margin:0; color:var(--muted);}
+    .card a{ color:var(--purple); text-decoration:none; }
+    .card a:hover{ text-decoration:underline; }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width:900px){ .steps{grid-template-columns:1fr;} }
+
+    .step{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:16px;
+      text-align:left;
+    }
+    /* ✅ minimal purple: just the number badge */
+    .num{
+      width:32px;height:32px;border-radius:10px;
+      background:rgba(162,89,255,.10);
+      border:1px solid rgba(162,89,255,.16);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;color:var(--purple);
+      margin-bottom:10px;
+    }
+
+    .footer{
+      border-top:1px solid var(--border);
+      padding:22px 0;
+      color:var(--muted);
+      font-size:14px;
+      background:#fff;
+    }
+    .footer a{color:var(--purple); text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .footer-row{
+      display:flex; gap:12px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+    }
+    .footer-links{display:flex; gap:14px; flex-wrap:wrap;}
+
+.app-preview{
+width:320px;
+max-width:90%;
+border-radius:34px;
+box-shadow:0 30px 80px rgba(0,0,0,.18);
+transition:opacity .4s ease;
+display:block;
+margin:auto;
+}
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a class="brand" href="/">
+          <span class="dot"></span>
+          <span>Tooti</span>
+        </a>
+        <div class="nav">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#english">English courses</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="pill">Audio-first • Speaking + listening • Built for real life</div>
+          <h1>Learn <span class="accent">English</span> for real life.</h1>
+          <p class="sub">
+            Short daily lessons for immigrants and beginners—speaking and listening practice for everyday English.
+          </p>
+
+          <div class="cta">
+            <!-- replace these links with your real store URLs -->
+            <a class="btn primary" href="#" aria-label="Download on the App Store"> App Store</a>
+            <a class="btn" href="#" aria-label="Get it on Google Play">▶ Google Play</a>
+          </div>
+
+          <div class="fine" style="margin-top:12px;">
+            Popular courses:
+            <a href="/english-for-dari-speakers">English for Dari</a> •
+            <a href="/english-for-pashto-speakers">English for Pashto</a> •
+            <a href="/english-for-urdu-speakers">English for Urdu</a> •
+            <a href="/english-for-spanish-speakers">English for Spanish</a> •
+            <a href="/english-for-farsi-speakers">English for Farsi</a> •
+            <a href="/languages">200+ languages</a>
+          </div>
+
+          <div class="fine">
+            Need help? Email <a href="mailto:hello@tootiapp.com">hello@tootiapp.com</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img id="appScreen" class="app-preview" src="/screenshots/screen1.png" alt="Tooti app screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">A simple path that stays motivating.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <b>Pick your course</b>
+          <div style="color:var(--muted)">Choose your language and start learning English immediately.</div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <b>Practice with audio</b>
+          <div style="color:var(--muted)">Listen first, then speak—train real-life English from day one.</div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <b>Build a daily habit</b>
+          <div style="color:var(--muted)">Streaks + progress make it easy to stay consistent.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">Designed to feel premium, but stay simple.</p>
+
+      <div class="cards">
+        <div class="card">
+          <b>Short daily lessons</b>
+          <p>Fast sessions that fit any schedule.</p>
+        </div>
+        <div class="card">
+          <b>Speaking + listening</b>
+          <p>Audio-first practice that builds real confidence.</p>
+        </div>
+        <div class="card">
+          <b>Motivation built-in</b>
+          <p>XP, streaks, and progress that feel rewarding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="english">
+    <div class="wrap">
+      <h2 class="section-title">English courses for 200+ languages</h2>
+      <p class="section-sub">
+        Tooti is designed for immigrants and beginners who want real-life English for daily life and work.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <b>English for immigrants</b>
+          <p>Survival English for shopping, appointments, directions, and everyday conversations.</p>
+        </div>
+        <div class="card">
+          <b>Workplace English</b>
+          <p>Simple phrases for schedules, coworkers, jobs, and communication at work.</p>
+        </div>
+        <div class="card">
+          <b>Courses by native language</b>
+          <p>Start from your language: Dari, Pashto, Urdu, Spanish, Farsi and more.</p>
+        </div>
+      </div>
+
+      <p class="fine" style="margin-top:12px;">
+        Explore:
+        <a href="/english-for-dari-speakers">English for Dari speakers</a> •
+        <a href="/english-for-pashto-speakers">English for Pashto speakers</a> •
+        <a href="/english-for-urdu-speakers">English for Urdu speakers</a> •
+        <a href="/english-for-spanish-speakers">English for Spanish speakers</a> •
+        <a href="/english-for-farsi-speakers">English for Farsi speakers</a> •
+        <a href="/languages">See all languages</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2 class="section-title">FAQ</h2>
+      <div class="cards">
+        <div class="card">
+          <b>Is Tooti free?</b>
+          <p>Basic learning is available. Optional subscriptions may be offered later.</p>
+        </div>
+        <div class="card">
+          <b>Which languages?</b>
+          <p>English courses for Dari, Pashto, Urdu, Spanish, Farsi and 200+ languages—built for immigrants and beginners.</p>
+        </div>
+        <div class="card">
+          <b>How do I get support?</b>
+          <p>Email <a href="mailto:hello@tootiapp.com">hello@tootiapp.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wrap">
+      <div class="footer-row">
+        <div>© <span id="y"></span> Tooti</div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+<script>
+
+const screenshots = [
+"/screenshots/screen1.png",
+"/screenshots/screen2.png",
+"/screenshots/screen3.png",
+"/screenshots/screen4.png",
+"/screenshots/screen5.png",
+"/screenshots/screen6.png"
+];
+
+let index = 0;
+const img = document.getElementById("appScreen");
+
+setInterval(() => {
+
+index++;
+if(index >= screenshots.length){
+index = 0;
+}
+
+img.style.opacity = 0;
+
+setTimeout(()=>{
+img.src = screenshots[index];
+img.style.opacity = 1;
+},200);
+
+},3000);
+
+</script>
+</body>
+</html>
